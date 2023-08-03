@@ -1,0 +1,79 @@
+body {
+  background: linear-gradient(45deg, pink, white, lightblue);
+  margin: 400px;
+}
+.navbar {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  position: relative;
+}
+.navbar-brand {
+  color: #ff5d9e;
+  font-weight: bolder;
+}
+h1,
+h2,
+h3,
+span {
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #00204a;
+}
+a {
+  color: inherit;
+}
+
+.units {
+  font-family: "Playfair Display", serif;
+  color: #00204a;
+  font-size: 50px;
+  border: #00204a;
+  text-decoration: none #00204a;
+  display: inline-block;
+  position: relative;
+  right: -180px;
+  top: -40px;
+}
+
+.tempIconClass {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  right: -150px;
+  margin: -30px;
+  font-size: 200px;
+  text-align: center;
+}
+.col {
+  font-family: "Lato", sans-serif;
+  color: #00204a;
+}
+
+.span-2 {
+  position: absolute;
+  top: 945px;
+  right: 400px;
+}
+.fa-light.fa-sun-haze {
+  font-size: 500px;
+}
+.main {
+  width: 200px;
+  display: block;
+  margin: 0 auto;
+}
+.monday {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+}
+.tuesday {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+}
+.wednesday {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+}
