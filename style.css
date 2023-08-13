@@ -43,6 +43,8 @@ a {
   margin: -30px;
   font-size: 200px;
   text-align: center;
+  font-family: "Playfair Display", serif;
+  color: #00204a;
 }
 .col {
   font-family: "Lato", sans-serif;
