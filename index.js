@@ -35,7 +35,7 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[date.getDay()];
-  return `${day}</br>${currentMonth}</br>${currentYear}</br>${hours}:${minutes}`;
+  return `${day}${currentYear}${hours}:${minutes}`;
 }
 
 function formatDay(timestamp) {
@@ -51,23 +51,6 @@ function formatDay(timestamp) {
     "Saturday",
   ];
   return days[day];
-}
-function formatMonth(timestamp) {
-  let months = [
-    "January",
-    "Febuary",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "Decemeber",
-  ];
-  return months[currentMonth + 1];
 }
 
 function displayTemperature(response) {
