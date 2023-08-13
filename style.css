@@ -80,3 +80,12 @@ a {
 .conditionClass {
   text-transform: capitalize;
 }
+
+.active {
+  text-decoration: none;
+  cursor: default;
+}
+.activeTwo {
+  text-decoration: none;
+  cursor: default;
+}
