@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(45deg, pink, white, lightblue);
-  margin: 400px;
+  margin: 100px;
 }
 .navbar {
   font-family: "Lato", sans-serif;
@@ -31,20 +31,21 @@ a {
   text-decoration: none #00204a;
   display: inline-block;
   position: relative;
-  right: -180px;
-  top: -40px;
+  right: -425px;
+  top: 15px;
 }
 
 .tempIconClass {
   text-align: center;
   display: inline-block;
+  top: 50px;
+  right: -400px;
   position: relative;
-  right: -150px;
-  margin: -30px;
   font-size: 200px;
   text-align: center;
   font-family: "Playfair Display", serif;
   color: #00204a;
+  line-height: 0px;
 }
 .col {
   font-family: "Lato", sans-serif;
@@ -53,8 +54,8 @@ a {
 
 .span-2 {
   position: absolute;
-  top: 945px;
-  right: 400px;
+  right: 200px;
+  top: 475px;
 }
 .fa-light.fa-sun-haze {
   font-size: 500px;
