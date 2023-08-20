@@ -21,8 +21,8 @@ span {
 }
 a {
   color: inherit;
+  text-decoration: none;
 }
-
 .units {
   font-family: "Playfair Display", serif;
   color: #00204a;
@@ -34,7 +34,6 @@ a {
   right: -425px;
   top: 15px;
 }
-
 .tempIconClass {
   text-align: center;
   display: inline-block;
@@ -52,7 +51,7 @@ a {
   color: #00204a;
 }
 
-.span-2 {
+.span-2.span-1 {
   position: absolute;
   right: 200px;
   top: 475px;
@@ -87,8 +86,12 @@ a {
 .active {
   text-decoration: none;
   cursor: default;
+  font-family: "Lato", sans-serif;
+  color: #00204a;
 }
 .activeTwo {
   text-decoration: none;
   cursor: default;
+  font-family: "Lato", sans-serif;
+  color: #00204a;
 }

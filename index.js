@@ -8,21 +8,6 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  let months = [
-    "January",
-    "Febuary",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "Decemeber",
-  ];
-  let currentMonth = date.getMonth();
   let currentYear = date.getFullYear();
 
   let days = [
@@ -51,6 +36,42 @@ function formatDay(timestamp) {
     "Saturday",
   ];
   return days[day];
+}
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thur", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-2">
+      <div class="weather-date">${day}</div>
+      <img
+        src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/.png"
+        alt=""
+        width="42px"
+        class="forecast-image"
+      ></img>
+      <div class="weather-forecast-temperature">
+        <span class="weather-forecast-temperature-max">
+          <strong>19</strong>
+        </span>
+        |
+        <span class="weather-forecast-temperature-min">24</span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function displayTemperature(response) {
@@ -125,3 +146,4 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("London");
+displayForecast();
