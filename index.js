@@ -38,7 +38,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 function formatDay(timestamp) {
-  let date = newDate(timestamp * 1000);
+  let date = new Date(timestamp * 1000);
   let day = date.getDay();
   let days = [
     "Sunday",
@@ -59,31 +59,29 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `
-    <div class="col-2">
-      <div class="weather-date">${formatDay(forecastDay.time)}</div>
-     <img
-          class="tempImg"
-          src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
-            forecastDay.condition.icon
-          }.png"
-          alt=""
-          width="42"
-        />
-      <div class="weather-forecast-temperature">
-        <span class="weather-forecast-temperature-max">
-          <strong>${Math.round(forecastDay.temperature.maximum)}</strong>
-        </span>
-        |
-        <span class="weather-forecast-temperature-min">${Math.round(
-          forecastDay.temperature.minimum
-        )}</span>
-      </div>
+        `<div class="container text-center">
+    <div class="row">
+        <div class="col-md-2">
+            <div class="weather-date">${formatDay(forecastDay.time)}</div>
+            <img class="tempImg" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
+              forecastDay.condition.icon
+            }.png" alt="" width="42" />
+            <div class="weather-forecast-temperature">
+                <span class="weather-forecast-temperature-max">
+                    <strong>${Math.round(
+                      forecastDay.temperature.maximum
+                    )}°C</strong>
+                </span>
+                |
+                <span class="weather-forecast-temperature-min">${Math.round(
+                  forecastDay.temperature.minimum
+                )}°C</span>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 `;
     }
@@ -118,7 +116,7 @@ function displayTemperature(response) {
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.time * 1000);
   iconElement.setAttribute("src", response.data.condition.icon_url);
-  iconElement.setAttribute("alt", response.data.weather[0].description);
+  iconElement.setAttribute("alt", response.data.condition.description);
 
   getForecast(response.data.coordinates);
 }
@@ -174,4 +172,3 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("London");
-displayForecast();

@@ -40,7 +40,7 @@ a {
   top: 50px;
   right: -400px;
   position: relative;
-  font-size: 200px;
+  font-size: 150px;
   text-align: center;
   font-family: "Playfair Display", serif;
   color: #00204a;
@@ -60,24 +60,9 @@ a {
   font-size: 500px;
 }
 .main {
-  width: 200px;
+  width: 150px;
   display: block;
   margin: 0 auto;
-}
-.monday {
-  display: block;
-  margin: 0 auto;
-  width: 75px;
-}
-.tuesday {
-  display: block;
-  margin: 0 auto;
-  width: 75px;
-}
-.wednesday {
-  display: block;
-  margin: 0 auto;
-  width: 75px;
 }
 .conditionClass {
   text-transform: capitalize;
@@ -94,4 +79,7 @@ a {
   cursor: default;
   font-family: "Lato", sans-serif;
   color: #00204a;
+}
+.cityClass {
+  font-size: 50px;
 }
