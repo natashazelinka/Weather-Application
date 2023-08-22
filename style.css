@@ -1,6 +1,6 @@
 body {
   background: linear-gradient(45deg, pink, white, lightblue);
-  margin: 100px;
+  margin: 350px;
 }
 .navbar {
   font-family: "Lato", sans-serif;
@@ -31,24 +31,25 @@ a {
   text-decoration: none #00204a;
   display: inline-block;
   position: relative;
-  right: -425px;
+  right: -250px;
   top: 15px;
 }
+.units:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .tempIconClass {
   text-align: center;
   display: inline-block;
   top: 50px;
-  right: -400px;
+  right: -250px;
   position: relative;
-  font-size: 150px;
+  font-size: 125px;
   text-align: center;
   font-family: "Playfair Display", serif;
   color: #00204a;
   line-height: 0px;
-}
-.col {
-  font-family: "Lato", sans-serif;
-  color: #00204a;
 }
 
 .span-2.span-1 {
@@ -67,7 +68,6 @@ a {
 .conditionClass {
   text-transform: capitalize;
 }
-
 .active {
   text-decoration: none;
   cursor: default;
@@ -81,5 +81,25 @@ a {
   color: #00204a;
 }
 .cityClass {
-  font-size: 50px;
+  font-size: 40px;
+}
+.weather-date {
+  font-family: "Lato", sans-serif;
+  color: #00204a;
+  font-weight: 1000;
+}
+.finalClause:hover {
+  text-decoration: none;
+  color: inherit;
+}
+span.weather-forecast-temperature-min {
+  font-family: "Lato", sans-serif;
+  color: #00204a;
+  font-weight: 100;
+}
+
+span.weather-forecast-temperature-max {
+  font-family: "Playfair Display", serif;
+  color: #00204a;
+  font-weight: 900;
 }
