@@ -62,32 +62,29 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML =
         forecastHTML +
-        `<div class="container text-center">
-    <div class="row">
-        <div class="col-md-2">
-            <div class="weather-date">${formatDay(forecastDay.time)}</div>
+        `
+          <div class="col-md-2 text-center">
+          <div class="weather-date">${formatDay(forecastDay.time)}</div>
             <img class="tempImg" src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${
               forecastDay.condition.icon
             }.png" alt="" width="42" />
             <div class="weather-forecast-temperature">
-                <span class="weather-forecast-temperature-max">
-                    <strong>${Math.round(
-                      forecastDay.temperature.maximum
-                    )}°C</strong>
-                </span>
-                |
-                <span class="weather-forecast-temperature-min">${Math.round(
-                  forecastDay.temperature.minimum
-                )}°C</span>
+              <span class="weather-forecast-temperature-max">
+                <strong>${Math.round(
+                  forecastDay.temperature.maximum
+                )}°C</strong>
+              </span>
+              |
+              <span class="weather-forecast-temperature-min">${Math.round(
+                forecastDay.temperature.minimum
+              )}°C</span>
             </div>
         </div>
-    </div>
-</div>
 `;
     }
   });
 
-  forecastHTML = forecastHTML + `</div>`;
+  forecastHTML = forecastHTML + `</>`;
   forecastElement.innerHTML = forecastHTML;
   console.log(forecastHTML);
 }
